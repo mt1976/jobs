@@ -32,9 +32,10 @@ func Start() {
 	c := cron.New()
 	// Insert Jobs Here
 	c.AddFunc("@every 10s", func() { RunJobHeartBeat(Scheduled) })
+	logit("RunJobHeartBeat", "ADD", "@every 10s")
 	c.AddFunc("@every 1m", func() { RunJobFXSPOT(Scheduled) })
-	//
-	log.Println(c.Entries())
+	logit("RunJobFXSPOT", "ADD", "@every 1m")
+	//log.Println(c.Entries())
 	c.Start()
 }
 
