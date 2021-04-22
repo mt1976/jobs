@@ -2,7 +2,6 @@ package jobs
 
 import (
 	"log"
-	"sync"
 
 	cron "github.com/robfig/cron/v3"
 )
@@ -12,18 +11,6 @@ const (
 	Scheduled = "Scheduled"
 	Adhoc     = "AdHoc"
 )
-
-func main() {
-
-	Start()
-
-	for {
-		wg := sync.WaitGroup{}
-		wg.Add(1)
-		wg.Wait()
-	}
-
-}
 
 // Start Initialises the Required Jobs
 func Start() {
