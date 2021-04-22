@@ -15,6 +15,8 @@ import (
 
 const constRateLen = 8
 
+var funcName = ""
+
 type fxRate struct {
 	ccyPair   string
 	bidRate   float64
@@ -178,13 +180,14 @@ func deliverRVData(name string, record string) {
 }
 
 func RunJobFXSPOT(actionType string) {
-	log.Println("*** REFRESH RATES ***", tools.Dquote(actionType))
+	funcName = "RunJobFXSPOT"
+	logit(funcName, actionType, "*** REFRESH RATES ***")
 	rateCard := buildRateCard()
 	//log.Println(rateCard, len(rateCard.fxRates))
 	//fmt.Println(rateCard, len(rateCard))
-	log.Println("*** BUILD RV DATA ***", tools.Dquote(actionType))
+	logit(funcName, actionType, "*** BUILD RV RATES ***")
 	outputString := buldFXRVRates(rateCard)
-	log.Println("*** DELIVER RV DATA ***", tools.Dquote(actionType))
+	logit(funcName, actionType, "*** DELIVER RATES ***")
 	deliverRVData("RVMARKET", outputString)
-	log.Println("*** DONE ***", tools.Dquote(actionType))
+	logit(funcName, actionType, "*** DONE ***")
 }
