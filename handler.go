@@ -10,7 +10,7 @@ import (
 //CONST_CONFIG_FILE is cheese
 const (
 	Scheduled = "Scheduled"
-	Adhoc     = "Ad-Hoc"
+	Adhoc     = "AdHoc"
 )
 
 func main() {
