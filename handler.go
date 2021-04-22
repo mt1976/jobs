@@ -4,7 +4,6 @@ import (
 	"log"
 	"sync"
 
-	tools "github.com/mt1976/mwtgostringtools"
 	cron "github.com/robfig/cron/v3"
 )
 
@@ -40,5 +39,5 @@ func Start() {
 }
 
 func logit(funcName string, actionType string, data string) {
-	log.Println(funcName, tools.Dquote(actionType), data)
+	log.Println(funcName, actionType, data)
 }
