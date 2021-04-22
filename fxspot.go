@@ -157,7 +157,7 @@ func buldFXRVRates(rateCard fxRateCard) string {
 		//fmt.Println(abc)
 		outputString = outputString + abc + "\n"
 	}
-	log.Println("\n", outputString)
+	//log.Println("\n", outputString)
 	return outputString
 }
 
@@ -180,14 +180,14 @@ func deliverRVData(name string, record string) {
 }
 
 func RunJobFXSPOT(actionType string) {
-	funcName = "RunJobFXSPOT"
-	logit(funcName, actionType, "*** REFRESH RATES ***")
+	//funcName = "RunJobFXSPOT"
+	logit(actionType, "*** REFRESH RATES ***")
 	rateCard := buildRateCard()
 	//log.Println(rateCard, len(rateCard.fxRates))
 	//fmt.Println(rateCard, len(rateCard))
-	logit(funcName, actionType, "*** BUILD RV RATES ***")
+	logit(actionType, "*** BUILD RV RATES ***")
 	outputString := buldFXRVRates(rateCard)
-	logit(funcName, actionType, "*** DELIVER RATES ***")
+	logit(actionType, "*** DELIVER RATES ***")
 	deliverRVData("RVMARKET", outputString)
-	logit(funcName, actionType, "*** DONE ***")
+	logit(actionType, "*** DONE ***")
 }
