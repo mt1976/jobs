@@ -4,9 +4,14 @@ import (
 	"log"
 	"sync"
 
-	"github.com/davecgh/go-spew/spew"
 	tools "github.com/mt1976/mwtgostringtools"
 	cron "github.com/robfig/cron/v3"
+)
+
+//CONST_CONFIG_FILE is cheese
+const (
+	Scheduled = "Scheduled"
+	Adhoc     = "Ad-Hoc"
 )
 
 func main() {
@@ -21,12 +26,15 @@ func main() {
 
 }
 
+// Start Initialises the Required Jobs
 func Start() {
-	log.Println("INSTANCE")
+	logit("JobHandler", "INIT", "JOB SCHEDULER")
 	c := cron.New()
-	c.AddFunc("@every 10s", func() { RunJobHeartBeat("") })
-	c.AddFunc("@every 1m", func() { RunJobFXSPOT("SCHEDULED") })
-	spew.Dump(c.Entries())
+	// Insert Jobs Here
+	c.AddFunc("@every 10s", func() { RunJobHeartBeat(Scheduled) })
+	c.AddFunc("@every 1m", func() { RunJobFXSPOT(Scheduled) })
+	//
+	log.Println(c.Entries())
 	c.Start()
 }
 
