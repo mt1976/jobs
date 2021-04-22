@@ -1,0 +1,8 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/mt1976/common v0.0.0-20210422154335-c43dade93d0b h1:oCDZiq3CeJwUSs/5HwyhJ3wP90dfIGX7/WdbDAj2YxY=
+github.com/mt1976/common v0.0.0-20210422154335-c43dade93d0b/go.mod h1:PKApWuz+s+oQ/OTb6ukq2CLa+08ZdYnUM4x7sT9R8yw=
+github.com/mt1976/mwtgostringtools v0.0.0-20210421215111-38c8d0f02812 h1:miQ7OxbzgZEJpM7kCP5VaZjs54Kz5UnCSZQIwyrHvKc=
+github.com/mt1976/mwtgostringtools v0.0.0-20210421215111-38c8d0f02812/go.mod h1:idR8Ggeq0OXDqISl+cwl8dblF/8bxVpwRpDyeWBYZ7o=
+github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
+github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=
